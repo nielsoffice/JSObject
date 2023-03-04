@@ -9,9 +9,15 @@ Handling JavaScript Object loop and notation and method basic approach
     lastName: 'Fernandez',
     Job: 'WordPress Developer'
     
-    contract: function(dateHired) { 
-     
+    contract: function(dateHired) {    
       return 2025 - dateHired;
+    }
+    
+    specialize: function() { 
+     // "this" using that key word you can create another property or properties inside the method
+      this.skill = ['JS', 'PHP', 'C++'];
+      
+      return this.skill;
       
     }
 
