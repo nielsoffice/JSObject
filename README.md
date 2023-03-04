@@ -8,6 +8,12 @@ Handling JavaScript Object loop and notation and method basic approach
     firstName: 'Niel',
     lastName: 'Fernandez',
     Job: 'WordPress Developer'
+    
+    contract: function(dateHired) { 
+     
+      return 2025 - dateHired;
+      
+    }
 
   }
    
@@ -21,6 +27,13 @@ Handling JavaScript Object loop and notation and method basic approach
 
   // Loop the object data
   for (let key in niel) { console.log(key, niel[key]); }
+  
+  // invoke the method from Object JS 
+  // using dot notation
+  console.log(niel.contract(2022));
+  
+  // using bracket notation
+  console.log(niel['contract'](2022));
 
 ```
 
