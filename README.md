@@ -47,8 +47,8 @@ Reference<br />
 <a href="https://stackoverflow.com/questions/14379274/how-to-iterate-over-a-javascript-object">How to iterate over a JavaScript object</a><br />
 
 <br />
- -----------------------------------------------------------------------------------------------------------------------------------------------------------
- <br />
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+<br />
 
 Object Data 
 
@@ -100,7 +100,11 @@ Valentines
 (2) ['three', 'Valentines']
 ```
 
- FALSY AND TRULY VALUES ! Long and shorthand version Checking.
+<br />
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+<br />
+
+FALSY AND TRULY VALUES ! Long and shorthand version Checking.
 
 ```JS
 // FALSY AND TRULY VALUES ! Long and shorthand version Checking.
@@ -133,4 +137,54 @@ Valentines
  New Year
  now found
  Valentines
+```
+
+<br />
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+<br />
+
+<br />Object Litteral | Dynamic object properties
+
+
+```JS
+// Property             Value
+// [`day-${ 1 + 5 }`] : { object: data }
+console.log() | result : day-6 : { open: 11, close: 10 }
+
+const weekdays = ['mon','tue','wed','thu','fri','sat','sun'];
+
+const workingHours = {
+  
+  // Thursday
+  [weekdays[3]] : {
+    open : 12,
+    close: 12,
+  },
+  // This means Friday !
+  [weekdays[4]] : {
+    open : 11,
+    close: 10,
+  },
+  // This means "day-6"
+  // pretend that the number 1 and 5 is dynamic value from third party object.
+  [`day-${ 1 + 5 }`] : {
+    open : 11,
+    close: 10,
+  }
+
+};
+
+console.log(workingHours);
+```
+
+```JS
+// Console.log() | Result 
+{thu: {…}, fri: {…}, day-6: {…}}
+day-6 : 
+  close : 10
+  open : 11
+  [[Prototype]] : Object
+fri : {open: 11, close: 10}
+thu : {open: 12, close: 12}
+[[Prototype]] : Object
 ```
